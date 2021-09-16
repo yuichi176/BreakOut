@@ -110,6 +110,13 @@ function setup() {
     }
   }
 
+  sound.onMouseOver = () => {
+      cursor(HAND);
+  }
+  sound.onMouseOut = () => {
+    cursor(ARROW);
+}
+
 }
 
 
@@ -232,10 +239,12 @@ function update() {
     // 文字列の表示
     fill(255);
     textAlign(CENTER);
-    textSize(40);
-    text("Congratulation!", width/2, height/2);
-    textSize(20);
-    text("クリックでもう一度", width/2, height/2 + 35);
+    textSize(50);
+    text("Congratulation!", width/2, height/2-45);
+    textSize(30);
+    text("クリアタイム:" + count + "秒", width/2, height/2+15);
+    textSize(15);
+    text("クリックでもう一度", width/2, height/2+60);
 
     paddle.position.x = constrain(mouseX, paddle.width/2, width-paddle.width/2);
   }
