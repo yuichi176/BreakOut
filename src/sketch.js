@@ -123,13 +123,11 @@ function setup() {
 
 }
 
-
 function draw() {
   background(246, 174, 95);
   update();
   drawSprites();
 }
-
 
 function update() {
   // ゲームクリア判定
@@ -141,7 +139,7 @@ function update() {
     fill(255);
     textAlign(CENTER);
     textSize(13);
-    text("クリックでスタート", width/2, height-18);
+    text("click to play", width/2, height-18);
     paddle.position.x = (width/2);
 
   } else if (gameState == "stay") {  // gameState = stay の時
@@ -150,7 +148,7 @@ function update() {
     fill(255);
     textAlign(CENTER);
     textSize(13);
-    text("クリックで再開", width/2, height-18);
+    text("click to start", width/2, height-18);
     paddle.position.x = constrain(mouseX, paddle.width/2, width-paddle.width/2);
 
     // タイマー処理
@@ -205,7 +203,7 @@ function update() {
     textSize(25);
     text("Game Over", width/2, 43);
     textSize(0);
-    text("クリックでもう一度", width/2, height-18);
+    text("click to play again", width/2, height-18);
 
     paddle.position.x = constrain(mouseX, paddle.width/2, width-paddle.width/2);
 
@@ -214,11 +212,11 @@ function update() {
     fill(255);
     textAlign(CENTER);
     textSize(50);
-    text("Congratulation!", width/2, height/2-45);
-    textSize(30);
-    text("クリアタイム:" + count + "秒", width/2, height/2+10);
+    text("Congratulations!", width/2, height/2-45);
+    textSize(28);
+    text("Time: " + count + "s", width/2, height/2+10);
     textSize(15);
-    text("クリックでもう一度", width/2, height/2+60);
+    text("click to play again", width/2, height/2+60);
 
     paddle.position.x = constrain(mouseX, paddle.width/2, width-paddle.width/2);
   }
