@@ -36,13 +36,13 @@ const GAME_OVER_COUNT = 3;
 
 // 画像ファイル、音声ファイルの読み込み
 function preload() {
-  heart1 = loadImage('../public/images/heart1.png');
-  heart2 = loadImage('../public/images/heart2.png');
-  sound_on = loadImage('../public/images/sound_on.png');
-  sound_off = loadImage('../public/images/sound_off.png');
-  effect_sound1 = loadSound('../public/sounds/effect_sound1.mp3');
-  // effect_sound2 = loadSound('../public/sounds/effect_sound2.mp3');
-  effect_sound3 = loadSound('../public/sounds/effect_sound3.mp3');
+  heart1 = loadImage('./images/heart1.png');
+  heart2 = loadImage('./images/heart2.png');
+  sound_on = loadImage('./images/sound_on.png');
+  sound_off = loadImage('./images/sound_off.png');
+  effect_sound1 = loadSound('./sounds/effect_sound1.mp3');
+  // effect_sound2 = loadSound('./sounds/effect_sound2.mp3');
+  effect_sound3 = loadSound('./sounds/effect_sound3.mp3');
 }
 
 function setup() {
